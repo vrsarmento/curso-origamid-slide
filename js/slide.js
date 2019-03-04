@@ -145,7 +145,7 @@ export class Slide {
 	}
 }
 
-export class SlideNav extends Slide {
+export default class SlideNav extends Slide {
 	constructor(slide, wrapper, initialSlide, controls = true, customControls) {
 		super(slide, wrapper, initialSlide);
 		this.controls = controls;
@@ -201,6 +201,6 @@ export class SlideNav extends Slide {
 	init() {
 		super.init();
 		this.bindControlEvents();
-		if (this.controls) this.addControl(this.customControl);
+		if (this.controls) this.addControl(this.customControls);
 	}
 }
